@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cidadania</title>
+  </head>
+  <body>
+    <h1>Sistema de Cidadania</h1>
+    Qual pais você mora? <input type="text" id="txtpais" />
+    <input type="button" value="Verificar" onclick="verificarCidadania()" />
+    <div id="res"></div>
+
+    <script>
+      function verificarCidadania() {
+        var txtp = window.document.querySelector("input#txtpais");
+        var res = window.document.querySelector("div#res");
+        var p = txtp.value;
+        res.innerHTML = `<p>O país que você mora é ${p}</p>`;
+        if (p == "Brasil") {
+          res.innerHTML += "Então você é Brasileiro!";
+        } else {
+          res.innerHTML += "Você é Estrangeiro";
+        }
+      }
+    </script>
+  </body>
+</html>
